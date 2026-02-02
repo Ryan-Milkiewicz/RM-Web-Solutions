@@ -1,50 +1,51 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="navbar bg-gray-100">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div className="relative flex h-16 items-center justify-between">
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex items-center">
+    <nav className="bg-gray-100 shadow">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16 items-center">
+          {/* Logo */}
+          <div className="shrink-0">
+            <Link href="/">
               <Image
                 src="/rm-web-solutions-logo.png"
                 alt="RM Web Solutions Logo"
-                height={315}
-                width={885}
-                className="h-[120px] w-auto"
+                width={150}
+                height={50}
+                className="cursor-pointer"
                 priority
               />
-            </div>
-            {/* <div className="hidden sm:ml-6 sm:block">
-              <div className="flex space-x-4">
-                <a
-                  href="#"
-                  aria-current="page"
-                  className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
-                >
-                  Dashboard
-                </a>
-                <a
-                  href="#"
-                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white"
-                >
-                  Team
-                </a>
-                <a
-                  href="#"
-                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white"
-                >
-                  Projects
-                </a>
-                <a
-                  href="#"
-                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white"
-                >
-                  Calendar
-                </a>
-              </div>
-            </div> */}
+            </Link>
+          </div>
+
+          {/* Links */}
+          <div className="hidden sm:flex space-x-6">
+            <Link
+              href="/"
+              className="text-gray-800 hover:text-orange-500 font-medium"
+            >
+              Home
+            </Link>
+            <Link
+              href="/about"
+              className="text-gray-800 hover:text-orange-500 font-medium"
+            >
+              About
+            </Link>
+            <Link
+              href="/services"
+              className="text-gray-800 hover:text-orange-500 font-medium"
+            >
+              Services
+            </Link>
+            <Link
+              href="/contact"
+              className="text-gray-800 hover:text-orange-500 font-medium"
+            >
+              Contact
+            </Link>
           </div>
         </div>
       </div>
