@@ -23,7 +23,7 @@ export default function NavLinks() {
       </Link>
       <Link
         className="text-orange-500 hover:text-orange-700 transition"
-        href="#contact"
+        href="/contact-us"
       >
         Contact
       </Link>
