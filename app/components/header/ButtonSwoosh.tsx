@@ -1,9 +1,13 @@
+import Link from "next/link";
+
 export default function ButtonWithSwoosh() {
   return (
     <div className="relative max-w-[600px] w-full">
-      <button className="mb-4 mt-4 bg-orange-500 rounded-lg text-white font-bold px-6 py-3">
-        Contact Us
-      </button>
+      <Link href="/contact-us">
+        <button className="mb-4 mt-4 bg-orange-500 rounded-lg text-white font-bold px-6 py-3 cursor-pointer">
+          Contact Us
+        </button>
+      </Link>
 
       <div className="absolute left-0 right-0 -bottom-12 h-16 overflow-visible pointer-events-none">
         <svg

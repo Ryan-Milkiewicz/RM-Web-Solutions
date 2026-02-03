@@ -25,7 +25,7 @@ export default function Services() {
 
         <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-start hover:shadow-lg transition h-64">
           <h4 className="text-xl font-bold text-gray-800 mb-2">
-            Custom App Development
+            Custom Application Development
           </h4>
           <p className="text-gray-500 mb-4">
             Create tailored web applications and software solutions that
