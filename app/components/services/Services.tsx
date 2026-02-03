@@ -1,6 +1,9 @@
 export default function Services() {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 items-center">
+    <section
+      id="services"
+      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 items-center"
+    >
       <div className="space-y-2 text-center md:text-left mb-6">
         <h3 className="text-orange-500 text-2xl font-bold">Our Services</h3>
         <p className="text-gray-500 font-medium">

@@ -4,7 +4,7 @@ import Services from "./components/services/Services";
 
 export default function Home() {
   return (
-    <main>
+    <main className="pb-12">
       <Header />
       <AboutUs />
       <Services />
