@@ -62,7 +62,7 @@ export async function sendEmail(
 
   // Send email via Resend
   try {
-    const data = await resend.emails.send({
+    await resend.emails.send({
       from: process.env.RESEND_TO!,
       to: [process.env.RESEND_INBOX!],
       replyTo: [email],
