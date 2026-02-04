@@ -5,19 +5,19 @@ export default function NavLinks() {
     <div className="hidden sm:flex space-x-6 font-bold">
       <Link
         className="text-orange-500 hover:text-orange-700 transition"
-        href="#home"
+        href="/#home"
       >
         Home
       </Link>
       <Link
         className="text-orange-500 hover:text-orange-700 transition"
-        href="#about-us"
+        href="/#about-us"
       >
         About
       </Link>
       <Link
         className="text-orange-500 hover:text-orange-700 transition"
-        href="#services"
+        href="/#services"
       >
         Services
       </Link>
