@@ -12,6 +12,14 @@ const contactFormSchema = z.object({
   message: z.string().optional(),
 });
 
+// Form default values
+export type FormValues = {
+  fullName: string;
+  email: string;
+  phoneNumber: string;
+  message?: string;
+};
+
 export type State = {
   errors?: {
     fullName?: string[];
@@ -21,8 +29,8 @@ export type State = {
   };
   message?: string | null;
   status?: "success" | "error";
+  values?: FormValues;
 };
-
 export async function sendEmail(
   previousState: State,
   formData: FormData,
@@ -38,9 +46,14 @@ export async function sendEmail(
   // If form validation fails, return errors early. Otherwise, continue.
   if (!validatedFields.success) {
     return {
-      errors: flattenError(validatedFields.error).fieldErrors,
-      // message: "Missing Fields.",
       status: "error",
+      errors: flattenError(validatedFields.error).fieldErrors,
+      values: {
+        fullName: String(formData.get("fullName") ?? ""),
+        email: String(formData.get("email") ?? ""),
+        phoneNumber: String(formData.get("phoneNumber") ?? ""),
+        message: String(formData.get("message") ?? ""),
+      },
     };
   }
 

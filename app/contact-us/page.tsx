@@ -34,7 +34,7 @@ export default function Page() {
             type="text"
             id="fullName"
             name="fullName"
-            defaultValue=""
+            defaultValue={state.values?.fullName ?? ""}
             placeholder="Your full name"
             className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
           />
@@ -57,7 +57,7 @@ export default function Page() {
           <input
             type="email"
             name="email"
-            defaultValue=""
+            defaultValue={state.values?.email ?? ""}
             placeholder="you@example.com"
             className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
           />
@@ -80,7 +80,7 @@ export default function Page() {
           <input
             type="text"
             name="phoneNumber"
-            defaultValue=""
+            defaultValue={state.values?.phoneNumber ?? ""}
             placeholder="(555) 123-4567"
             className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
           />
@@ -114,7 +114,7 @@ export default function Page() {
           className="w-full bg-orange-500 text-white font-bold py-3 rounded-lg hover:bg-orange-600 transition"
           disabled={isLoading}
         >
-          Send Message
+          {isLoading ? "Sending..." : "Submit"}
         </button>
 
         {state.status === "success" && (
