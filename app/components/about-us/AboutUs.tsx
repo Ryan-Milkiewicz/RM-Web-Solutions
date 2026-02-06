@@ -10,10 +10,10 @@ export default function AboutUs() {
           Custom Software Designed to Accelerate Your Growth
         </h4>
         <p className="text-gray-500 font-medium">
-          I’m a passionate web and software developer with 10+ years of
-          experience creating modern websites, custom applications, and mobile
-          apps. My focus is on building solutions that help businesses stand
-          out, streamline operations, and achieve measurable results.
+          RM Web Solutions brings over 10 years of experience in web and
+          software development, delivering modern websites, custom applications,
+          and mobile apps. Our team builds solutions designed to elevate brands,
+          improve efficiency, and drive real business results.
         </p>
         <p className="text-gray-500 font-medium">
           From responsive websites optimized for SEO to tailored software that
