@@ -17,8 +17,8 @@ export default function AboutUs() {
         </p>
         <p className="text-gray-500 font-medium">
           From responsive websites optimized for SEO to tailored software that
-          fits your unique workflow, I combine creativity and technology to
-          bring ideas to life. I’m committed to delivering high-quality,
+          fits your unique workflow, we combine creativity and technology to
+          bring ideas to life. We&apos;re committed to delivering high-quality,
           scalable solutions that grow with your business.
         </p>
       </div>

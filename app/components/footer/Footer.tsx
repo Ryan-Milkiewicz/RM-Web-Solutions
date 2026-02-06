@@ -1,17 +1,19 @@
 export default function Footer() {
   return (
     <footer className="bg-blue-950">
-      <div className="h-16 flex items-center justify-center space-x-4">
-        <span className="text-orange-500 text-md font-large">
+      <div className="py-4 px-4 flex flex-col sm:flex-row items-center justify-center sm:space-x-4 space-y-2 sm:space-y-0 text-center">
+        <span className="text-orange-500 text-md font-semibold">
           &copy; {new Date().getFullYear()} RM Web Solutions. All rights
           reserved.
         </span>
 
-        <span className="text-orange-500 text-md font-large">|</span>
+        <span className="text-orange-500 text-md font-semibold hidden sm:inline">
+          |
+        </span>
 
         <a
           href="mailto:info@rmwebsolutions.com"
-          className="text-orange-500 text-md font-large hover:text-white transition"
+          className="text-orange-500 text-md font-semibold hover:text-white transition"
         >
           info@rmwebsolutions.com
         </a>
