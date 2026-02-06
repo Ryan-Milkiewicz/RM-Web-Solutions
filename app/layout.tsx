@@ -24,7 +24,7 @@ export default function RootLayout({
     name: "RM Web Solutions",
     url: "https://www.rmwebsolutions.com",
     description:
-      "RM Web Solutions is a web and application development business providing custom websites, web applications, and mobile solutions for businesses",
+      "RM Web Solutions is a web and application development business providing custom websites, web applications, mobile solutions, and maintenance for businesses",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Wynantskill",
