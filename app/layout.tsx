@@ -13,6 +13,29 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const metadata = {
+  title: "RM Web Solutions | Modern Web Development Services",
+  description:
+    "RM Web Solutions builds fast, SEO-friendly websites and custom applications using modern design practices.",
+  openGraph: {
+    title: "RM Web Solutions | Modern Web Development Services",
+    description:
+      "RM Web Solutions builds fast, SEO-friendly websites and custom applications using modern design practices.",
+    url: "https://rmwebsolutions.com",
+    siteName: "RM Web Solutions",
+    type: "website",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -31,10 +54,6 @@ export default function RootLayout({
       addressRegion: "NY",
       postalCode: "12198",
       addressCountry: "US",
-    },
-    areaServed: {
-      "@type": "AdministrativeArea",
-      name: "United States",
     },
     contactPoint: {
       "@type": "ContactPoint",
