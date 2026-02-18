@@ -1,3 +1,6 @@
+import { HiOutlineLocationMarker } from "react-icons/hi";
+import { MdAlternateEmail } from "react-icons/md";
+
 export default function Footer() {
   return (
     <footer className="bg-blue-950 border-t-orange-500 border-t-3">
@@ -11,10 +14,20 @@ export default function Footer() {
           |
         </span>
 
+        <span className="flex items-center text-orange-500 text-md font-semibold">
+          <HiOutlineLocationMarker className="mr-1" />
+          Wynantskill, NY
+        </span>
+
+        <span className="text-orange-500 text-md font-semibold hidden sm:inline">
+          |
+        </span>
+
         <a
           href="mailto:info@rmwebsolutions.com"
-          className="text-orange-500 text-md font-semibold hover:text-white transition"
+          className="flex items-center text-orange-500 text-md font-semibold hover:text-white transition"
         >
+          <MdAlternateEmail className="mr-1" />
           info@rmwebsolutions.com
         </a>
       </div>
