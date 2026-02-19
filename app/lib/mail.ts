@@ -43,6 +43,11 @@ export async function sendEmail(
     message: formData.get("message"),
   });
 
+  // if honeypot is filled, it's a bot
+  if (formData.get("honeypot")) {
+    return { status: "error", message: "Spam detected." };
+  }
+
   // If form validation fails, return errors early. Otherwise, continue.
   if (!validatedFields.success) {
     return {

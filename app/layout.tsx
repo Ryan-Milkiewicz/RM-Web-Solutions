@@ -17,6 +17,25 @@ export const metadata = {
   title: "RM Web Solutions | Modern Web Development Services",
   description:
     "RM Web Solutions builds fast, SEO-friendly websites and custom applications using modern design practices.",
+  alternates: {
+    canonical: "https://rmwebsolutions.com",
+  },
+  keywords: [
+    "web development",
+    "web design",
+    "mobile applications",
+    "website maintenance",
+    "website support",
+    "custom websites",
+    "web hosting",
+    "website hosting",
+    "New York",
+    "Wynantskill",
+    "Albany",
+    "Capital District",
+    "Troy",
+    "Saratoga",
+  ],
   openGraph: {
     title: "RM Web Solutions | Modern Web Development Services",
     description:
@@ -24,6 +43,12 @@ export const metadata = {
     url: "https://rmwebsolutions.com",
     siteName: "RM Web Solutions",
     type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "RM Web Solutions | Modern Web Development Services",
+    description:
+      "RM Web Solutions builds fast, SEO-friendly websites and custom applications using modern design practices.",
   },
   icons: {
     icon: [
@@ -43,9 +68,10 @@ export default function RootLayout({
 }>) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "ProfessionalService"],
+    "@type": ["Organization", "ProfessionalService"],
     name: "RM Web Solutions",
     url: "https://www.rmwebsolutions.com",
+    email: "info@rmwebsolutions.com",
     description:
       "RM Web Solutions is a web and application development business providing custom websites, web applications, mobile solutions, and maintenance for businesses",
     address: {
@@ -66,7 +92,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>RM Web Solutions</title>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

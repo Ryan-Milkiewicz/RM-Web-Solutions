@@ -14,9 +14,9 @@ export default function Page() {
       id="contact"
       className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pb-32"
     >
-      <h3 className="text-orange-500 text-2xl font-bold mb-2 text-center">
+      <h1 className="text-orange-500 text-2xl font-bold mb-2 text-center">
         Contact Us
-      </h3>
+      </h1>
       <p className="text-gray-500 text-center mb-8">
         Let’s talk about your project. Fill out the form below and we’ll get
         back to you.
@@ -26,6 +26,15 @@ export default function Page() {
         action={formAction}
         className="bg-white rounded-xl shadow-lg p-8 space-y-8"
       >
+        {/* Honeypot - hidden from real users */}
+        <input
+          type="text"
+          name="honeypot"
+          id="honeypot"
+          className="hidden"
+          tabIndex={-1}
+          autoComplete="off"
+        />
         <div>
           <label className="block text-gray-700 font-medium mb-1">
             Full Name
@@ -34,6 +43,7 @@ export default function Page() {
             type="text"
             id="fullName"
             name="fullName"
+            required
             defaultValue={state.values?.fullName ?? ""}
             placeholder="Your full name"
             className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
@@ -58,6 +68,7 @@ export default function Page() {
             type="email"
             name="email"
             defaultValue={state.values?.email ?? ""}
+            required
             placeholder="you@example.com"
             className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
           />
@@ -82,6 +93,7 @@ export default function Page() {
             name="phoneNumber"
             defaultValue={state.values?.phoneNumber ?? ""}
             placeholder="(555) 123-4567"
+            required
             className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
           />
 
