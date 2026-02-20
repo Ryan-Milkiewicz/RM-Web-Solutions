@@ -14,9 +14,9 @@ export default function MobileMenu() {
         aria-label="Toggle Menu"
         className="flex flex-col gap-1"
       >
-        <span className="h-0.5 w-6 bg-black"></span>
-        <span className="h-0.5 w-6 bg-black"></span>
-        <span className="h-0.5 w-6 bg-black"></span>
+        <span className="h-0.5 w-6 bg-white"></span>
+        <span className="h-0.5 w-6 bg-white"></span>
+        <span className="h-0.5 w-6 bg-white"></span>
       </button>
 
       {/* Mobile dropdown */}
