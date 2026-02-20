@@ -44,9 +44,9 @@ export default function Services() {
         {services.map((service) => (
           <div
             key={service.title}
-            className="bg-white rounded-xl shadow-md p-6 flex flex-col items-start hover:shadow-lg transition h-64"
+            className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-start hover:shadow-xl hover:-translate-y-2 transition-all duration-300 min-h-64 border-t-4 border-t-orange-500"
           >
-            <div className="mb-3">
+            <div className="mb-3 bg-orange-100 p-3 rounded-full">
               <service.icon className="text-orange-500" size={32} />
             </div>
             <h3 className="text-xl font-bold text-gray-800 mb-2">
