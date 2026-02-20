@@ -14,8 +14,8 @@ export default function Navbar() {
               <Image
                 src="/rm-web-solutions-logo.png"
                 alt="RM Web Solutions Logo"
-                width={215}
-                height={215}
+                width={230}
+                height={230}
                 className="cursor-pointer drop-shadow-md transition-transform duration-300 hover:scale-105"
                 priority
               />
