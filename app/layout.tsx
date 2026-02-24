@@ -68,10 +68,21 @@ export default function RootLayout({
 }>) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": ["Organization", "ProfessionalService"],
+    "@type": "ProfessionalService",
     name: "RM Web Solutions",
     url: "https://www.rmwebsolutions.com",
     email: "info@rmwebsolutions.com",
+    telephone: "+1-518-937-0948",
+    areaServed: [
+      "Wynantskill",
+      "Averill Park",
+      "West Sand Lake",
+      "Troy",
+      "Albany",
+      "Saratoga",
+      "Capital District",
+      "Rensselaer County",
+    ],
     description:
       "RM Web Solutions is a web and application development business providing custom websites, web applications, mobile solutions, and maintenance for businesses",
     address: {
@@ -84,6 +95,7 @@ export default function RootLayout({
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "Customer Service",
+      telephone: "+1-518-937-0948",
       areaServed: "US",
       email: "info@rmwebsolutions.com",
       availableLanguage: "English",

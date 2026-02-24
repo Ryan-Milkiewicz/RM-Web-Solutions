@@ -1,5 +1,6 @@
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { MdAlternateEmail } from "react-icons/md";
+import { BsTelephone } from "react-icons/bs";
 
 export default function Footer() {
   return (
@@ -17,6 +18,17 @@ export default function Footer() {
             <HiOutlineLocationMarker className="mr-1" />
             Wynantskill, NY
           </span>
+
+          <span className="text-orange-500 hidden sm:inline">|</span>
+
+          <a
+            href="tel:+15189370948"
+            aria-label="Call RM Web Solutions"
+            className="flex items-center text-orange-500 text-sm font-semibold hover:text-white transition"
+          >
+            <BsTelephone className="mr-1" />
+            (518) 937-0948
+          </a>
 
           <span className="text-orange-500 hidden sm:inline">|</span>
 

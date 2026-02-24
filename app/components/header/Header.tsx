@@ -11,7 +11,9 @@ export default function Header() {
         <h1 className="text-2xl font-bold">
           <span className="text-orange-500">Professional Web Solutions</span>
           <br />
-          <span className="text-gray-800">To Boost your Business</span>
+          <span className="text-gray-800">
+            Serving Albany, Troy & the Capital District
+          </span>
         </h1>
         <p className="font-medium text-gray-500">
           We design and develop modern websites and custom software solutions

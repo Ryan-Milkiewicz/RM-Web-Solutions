@@ -12,7 +12,9 @@ export default function AboutUs() {
         <p className="text-gray-500 font-medium">
           Backed by over 10 years of web and software development experience, RM
           Web Solutions delivers modern websites and custom applications built
-          to grow your business.
+          to grow your business. Proudly serving Wynantskill, Troy, Albany,
+          Saratoga, Rensselaer County, and the greater Capital District of New
+          York.
         </p>
         <p className="text-gray-500 font-medium">
           From responsive websites optimized for SEO to tailored software that
