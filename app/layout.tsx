@@ -71,7 +71,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: "RM Web Solutions",
-    url: "https://www.rmwebsolutions.com",
+    url: "https://rmwebsolutions.com",
     email: "info@rmwebsolutions.com",
     telephone: "+1-518-937-0948",
     areaServed: [
