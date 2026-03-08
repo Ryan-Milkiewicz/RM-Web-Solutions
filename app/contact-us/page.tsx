@@ -14,7 +14,7 @@ export default function Page() {
       id="contact"
       className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pb-32"
     >
-      <h1 className="text-orange-500 text-2xl font-bold mb-2 text-center">
+      <h1 className="font-sora text-orange-500 text-2xl font-bold mb-2 text-center">
         Contact Us
       </h1>
       <p className="text-gray-500 text-center mb-8">
