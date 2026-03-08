@@ -34,10 +34,12 @@ export default function Services() {
       className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 items-center"
     >
       <div className="space-y-2 text-center md:text-left mb-6">
-        <h2 className="text-orange-500 text-2xl font-bold">Our Services</h2>
-        <p className="text-gray-500 font-medium">
+        <h2 className="font-sora text-orange-500 text-2xl font-bold">
+          Our Services
+        </h2>
+        <h3 className="font-jakarta text-gray-800 text-xl font-semibold">
           We provide a range of services to help your business grow and succeed.
-        </p>
+        </h3>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -49,10 +51,10 @@ export default function Services() {
             <div className="mb-3 bg-orange-100 p-3 rounded-full">
               <service.icon className="text-orange-500" size={32} />
             </div>
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="font-sora text-xl font-bold text-gray-800 mb-2">
               {service.title}
             </h3>
-            <p className="text-gray-500">{service.description}</p>
+            <p className=" text-gray-500">{service.description}</p>
           </div>
         ))}
       </div>
