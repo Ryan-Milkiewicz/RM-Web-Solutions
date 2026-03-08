@@ -28,7 +28,7 @@ export default function Header() {
           alt="RM Web Solutions - Professional Web Development Services"
           width={450}
           height={450}
-          className="cursor-pointer object-contain"
+          className="cursor-pointer object-contain rounded-2xl"
           priority
         />
       </div>
