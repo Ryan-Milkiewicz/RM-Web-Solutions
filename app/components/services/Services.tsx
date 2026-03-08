@@ -37,9 +37,9 @@ export default function Services() {
         <h2 className="font-sora text-orange-500 text-2xl font-bold">
           Our Services
         </h2>
-        <p className=" text-gray-500 font-medium">
+        <h3 className="font-jakarta text-gray-800 text-xl font-semibold">
           We provide a range of services to help your business grow and succeed.
-        </p>
+        </h3>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
