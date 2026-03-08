@@ -15,7 +15,7 @@ export default function Header() {
             Serving Albany, Troy & the Capital District
           </span>
         </h1>
-        <p className="font-medium text-gray-500">
+        <p className="font-bold text-gray-500">
           We design and develop modern websites and custom software solutions
           that help your business stand out, streamline operations, and turn
           ideas into real results.

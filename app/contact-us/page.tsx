@@ -17,7 +17,7 @@ export default function Page() {
       <h1 className="font-sora text-orange-500 text-2xl font-bold mb-2 text-center">
         Contact Us
       </h1>
-      <p className="text-gray-500 text-center mb-8">
+      <p className="text-gray-500 text-center mb-8 font-bold">
         Let’s talk about your project. Fill out the form below and we’ll get
         back to you.
       </p>

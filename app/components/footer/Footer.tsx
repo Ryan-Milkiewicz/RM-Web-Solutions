@@ -7,14 +7,14 @@ export default function Footer() {
     <footer className="bg-blue-950 border-t-[3px] border-t-orange-500">
       <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 text-center">
-          <span className="text-orange-500 text-sm font-semibold">
+          <span className="text-orange-500 text-sm font-bold">
             &copy; {new Date().getFullYear()} RM Web Solutions. All rights
             reserved.
           </span>
 
           <span className="text-orange-500 hidden sm:inline">|</span>
 
-          <span className="flex items-center text-orange-500 text-sm font-semibold">
+          <span className="flex items-center text-orange-500 text-sm font-bold">
             <HiOutlineLocationMarker className="mr-1" />
             Wynantskill, NY
           </span>
@@ -24,9 +24,9 @@ export default function Footer() {
           <a
             href="tel:+15189370948"
             aria-label="Call RM Web Solutions"
-            className="flex items-center text-orange-500 text-sm font-semibold hover:text-white transition"
+            className="flex items-center text-orange-500 text-sm font-bold hover:text-white transition"
           >
-            <BsTelephone className="mr-1" />
+            <BsTelephone className="mr-1 font-bold" />
             (518) 937-0948
           </a>
 
@@ -35,9 +35,9 @@ export default function Footer() {
           <a
             href="mailto:info@rmwebsolutions.com"
             aria-label="Send an email to RM Web Solutions"
-            className="flex items-center text-orange-500 text-sm font-semibold hover:text-white transition"
+            className="flex items-center text-orange-500 text-sm font-bold hover:text-white transition"
           >
-            <MdAlternateEmail className="mr-1" />
+            <MdAlternateEmail className="mr-1 font-bold" />
             info@rmwebsolutions.com
           </a>
         </div>

@@ -54,7 +54,7 @@ export default function Services() {
             <h3 className="font-sora text-xl font-bold text-gray-800 mb-2">
               {service.title}
             </h3>
-            <p className=" text-gray-500">{service.description}</p>
+            <p className=" text-gray-500 font-bold">{service.description}</p>
           </div>
         ))}
       </div>
