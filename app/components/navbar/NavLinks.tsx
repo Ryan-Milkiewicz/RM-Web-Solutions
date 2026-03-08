@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function NavLinks() {
   return (
-    <div className="hidden sm:flex space-x-6 font-bold">
+    <div className="hidden sm:flex space-x-6 font-sora font-bold">
       <Link
         className="text-white hover:text-orange-500 transition"
         href="/#home"

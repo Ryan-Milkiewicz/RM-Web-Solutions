@@ -1,16 +1,16 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Sora, Plus_Jakarta_Sans } from "next/font/google";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const sora = Sora({
   subsets: ["latin"],
+  variable: "--font-sora",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
+  variable: "--font-jakarta",
 });
 
 export const metadata = {
@@ -104,7 +104,7 @@ export default function RootLayout({
     },
   };
   return (
-    <html lang="en">
+    <html lang="en" className={`${sora.variable} ${jakarta.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -112,7 +112,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased smooth-scroll`}
+        className={`${sora.variable} ${jakarta.variable} font-jakarta antialiased smooth-scroll`}
       >
         <Navbar />
         {children}

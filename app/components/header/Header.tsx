@@ -8,10 +8,10 @@ export default function Header() {
       className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 items-center"
     >
       <div className="space-y-2 mb-16">
-        <h1 className="text-2xl font-bold">
-          <span className="text-orange-500">Professional Web Solutions</span>
+        <h1 className="font-sora text-2xl font-bold">
+          <span className=" text-orange-500">Professional Web Solutions</span>
           <br />
-          <span className="text-gray-800">
+          <span className=" text-gray-800">
             Serving Albany, Troy & the Capital District
           </span>
         </h1>

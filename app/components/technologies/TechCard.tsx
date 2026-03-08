@@ -17,7 +17,7 @@ export default function TechCard({ name, logo, alt }: TechCardProps) {
         height={40}
         className="relative z-10 object-contain"
       />
-      <p className="relative z-10 font-semibold text-gray-800 text-sm tracking-wide">
+      <p className="font-jakarta relative z-10 font-semibold text-gray-800 text-sm tracking-wide">
         {name}
       </p>
     </div>

@@ -5,8 +5,10 @@ export default function AboutUs() {
       className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 items-center"
     >
       <div className="space-y-4 mb-4">
-        <h2 className="text-orange-500 text-2xl font-bold">About Us</h2>
-        <h3 className="text-gray-800 text-xl font-semibold">
+        <h2 className="font-sora text-orange-500 text-2xl font-bold">
+          About Us
+        </h2>
+        <h3 className="font-sora text-gray-800 text-xl font-semibold">
           Custom Software Designed to Accelerate Your Growth
         </h3>
         <p className="text-gray-500 font-medium">
