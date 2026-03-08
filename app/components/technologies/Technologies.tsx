@@ -1,4 +1,16 @@
+import TechCard from "./TechCard";
+
 export default function Technologies() {
+  const techs = [
+    { name: "REACT", logo: "/react-logo.svg", alt: "React logo" },
+    { name: "NEXT.JS", logo: "/nextjs-logo.svg", alt: "Next.JS Logo" },
+    { name: "ANGULAR", logo: "/angular-logo.svg", alt: "Angular Logo" },
+    { name: "WORDPRESS", logo: "/wordpress-logo.svg", alt: "Wordpress Logo" },
+    { name: "NODE.JS", logo: "/nodejs-logo.svg", alt: "Node.JS Logo" },
+    { name: ".NET CORE", logo: "/dotnetcore-logo.svg", alt: ".NET Core Logo" },
+    { name: "PHP", logo: "/php-logo.svg", alt: "PHP Logo" },
+    { name: "DOCKER", logo: "/docker-logo.svg", alt: "Docker Logo" },
+  ];
   return (
     <section
       id="technologies"
@@ -7,9 +19,13 @@ export default function Technologies() {
       <div className="space-y-4 mb-4">
         <h2 className="text-orange-500 text-2xl font-bold">Technologies</h2>
         <h3 className="text-gray-800 text-xl font-semibold">
-          Our Tech Stack We work with modern, battle-tested technologies to
-          build fast, scalable, and maintainable products.
+          Some of the cool tech we love to build with.
         </h3>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
+          {techs.map((tech) => (
+            <TechCard key={tech.name} {...tech} />
+          ))}
+        </div>
       </div>
     </section>
   );
