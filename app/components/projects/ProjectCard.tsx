@@ -19,9 +19,14 @@ export default function ProjectCard({
   review,
   reviewer,
 }: ProjectCardProps) {
+  const techIcons: Record<string, string> = {
+    "Next.js": "/nextjs-logo.svg",
+    "Tailwind CSS": "/tailwindcss-logo.svg",
+    Vercel: "/vercel-logo.svg",
+  };
   return (
     <div
-      className="group relative w-80 h-126 cursor-pointer"
+      className="group relative w-80 h-134 cursor-pointer"
       style={{ perspective: "1200px" }}
     >
       {/* Flip container */}
@@ -59,8 +64,17 @@ export default function ProjectCard({
               {technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="font-sora px-2.5 py-1 bg-orange-50 text-orange-600 text-xs font-medium rounded-full border border-orange-100"
+                  className="flex items-center gap-1.5 font-sora px-2.5 py-1 bg-orange-50 text-orange-600 text-xs font-medium rounded-full border border-orange-100"
                 >
+                  {techIcons[tech] && (
+                    <Image
+                      src={techIcons[tech]}
+                      alt={tech}
+                      width={12}
+                      height={12}
+                      className="w-3 h-3"
+                    />
+                  )}
                   {tech}
                 </span>
               ))}
@@ -94,7 +108,19 @@ export default function ProjectCard({
           </p>
 
           <div className="mt-auto text-center">
-            <p className="font-jakarta text-orange-200 text-xs font-medium">
+            <div className="flex items-center justify-center gap-1.5 mb-2">
+              <Image
+                src="/google-logo.svg"
+                alt="Google"
+                width={16}
+                height={16}
+                className="w-4 h-4"
+              />
+              <span className="font-jakarta text-white/70 text-sm">
+                Google Review
+              </span>
+            </div>
+            <p className="font-jakarta text-orange-200 text-sm font-medium">
               {reviewer}
             </p>
             <a
