@@ -12,19 +12,21 @@ type ProjectCardProps = {
 };
 
 export default function ProjectCard({
-  name = "Clemens Electric",
-  description = "A modern website for a local electrical contractor, featuring service listings, project gallery, and contact booking.",
-  technologies = ["Next.js", "Tailwind CSS", "Vercel"],
-  siteUrl = "https://clemenselectric.com",
-  review = "Working with this developer was an absolute pleasure. The site looks incredible and we've had so many compliments from customers. Our leads doubled in the first month!",
-  reviewer = "— Mike Clemens, Owner",
-}: Partial<ProjectCardProps>) {
+  name,
+  description,
+  technologies,
+  siteUrl,
+  review,
+  reviewer,
+}: ProjectCardProps) {
   const [flipped, setFlipped] = useState(false);
-  const screenshotUrl = `https://api.microlink.io/?url=${encodeURIComponent(siteUrl)}&screenshot=true&meta=false&embed=screenshot.url`;
+  const screenshotUrl = siteUrl
+    ? `https://api.microlink.io/?url=${encodeURIComponent(siteUrl)}&screenshot=true&meta=false&embed=screenshot.url`
+    : null;
 
   return (
     <div
-      className="relative w-80 h-120 cursor-pointer"
+      className="relative w-80 h-125 cursor-pointer"
       style={{ perspective: "1200px" }}
       onMouseEnter={() => setFlipped(true)}
       onMouseLeave={() => setFlipped(false)}
@@ -36,25 +38,27 @@ export default function ProjectCard({
           transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
         }}
       >
-        {/* FRONT */}
+        {/* Front of Card */}
         <div
           className="absolute inset-0 rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-md flex flex-col"
           style={{ backfaceVisibility: "hidden" }}
         >
-          {/* Screenshot — big */}
+          {/* Screenshot of Website */}
           <div className="relative w-full h-52 bg-gray-100 shrink-0 overflow-hidden">
-            <Image
-              src={screenshotUrl}
-              alt={`${name} screenshot`}
-              fill
-              className="object-cover object-top"
-              unoptimized
-            />
+            {screenshotUrl && (
+              <Image
+                src={screenshotUrl}
+                alt={`${name} screenshot`}
+                fill
+                className="object-cover object-top"
+                unoptimized
+              />
+            )}
             {/* subtle gradient fade at bottom */}
-            <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 h-8 bg-linear-to-t from-white to-transparent" />
           </div>
 
-          {/* Content */}
+          {/* Card Content */}
           <div className="flex flex-col gap-3 p-5 flex-1">
             <h3 className="font-semibold text-gray-900 text-lg leading-tight">
               {name}
@@ -63,25 +67,26 @@ export default function ProjectCard({
               {description}
             </p>
 
-            {/* Technologies */}
+            {/* Technologies Used on Project */}
             <div className="mt-auto flex flex-wrap gap-2">
-              {technologies.map((tech) => (
-                <span
-                  key={tech}
-                  className="px-2.5 py-1 bg-orange-50 text-orange-600 text-xs font-medium rounded-full border border-orange-100"
-                >
-                  {tech}
-                </span>
-              ))}
+              {technologies &&
+                technologies.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-2.5 py-1 bg-orange-50 text-orange-600 text-xs font-medium rounded-full border border-orange-100"
+                  >
+                    {tech}
+                  </span>
+                ))}
             </div>
 
             <p className="text-xs text-gray-400 mt-1">Hover to see review →</p>
           </div>
         </div>
 
-        {/* BACK */}
+        {/* Back of card */}
         <div
-          className="absolute inset-0 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 shadow-md flex flex-col items-center justify-center p-8 text-white"
+          className="absolute inset-0 rounded-2xl bg-linear-to-br from-orange-500 to-orange-600 shadow-md flex flex-col items-center justify-center p-8 text-white"
           style={{
             backfaceVisibility: "hidden",
             transform: "rotateY(180deg)",
