@@ -2,14 +2,22 @@ import TechCard from "./TechCard";
 
 export default function Technologies() {
   const techs = [
-    { name: "REACT", logo: "/react-logo.svg", alt: "React logo" },
-    { name: "NEXT.JS", logo: "/nextjs-logo.svg", alt: "Next.JS Logo" },
-    { name: "ANGULAR", logo: "/angular-logo.svg", alt: "Angular Logo" },
-    { name: "WORDPRESS", logo: "/wordpress-logo.svg", alt: "Wordpress Logo" },
-    { name: "NODE.JS", logo: "/nodejs-logo.svg", alt: "Node.JS Logo" },
-    { name: ".NET CORE", logo: "/dotnetcore-logo.svg", alt: ".NET Core Logo" },
-    { name: "PHP", logo: "/php-logo.svg", alt: "PHP Logo" },
-    { name: "DOCKER", logo: "/docker-logo.svg", alt: "Docker Logo" },
+    { name: "REACT", logo: "/icons/react-logo.svg", alt: "React logo" },
+    { name: "NEXT.JS", logo: "/icons/nextjs-logo.svg", alt: "Next.JS Logo" },
+    { name: "ANGULAR", logo: "/icons/angular-logo.svg", alt: "Angular Logo" },
+    {
+      name: "WORDPRESS",
+      logo: "/icons/wordpress-logo.svg",
+      alt: "Wordpress Logo",
+    },
+    { name: "NODE.JS", logo: "/icons/nodejs-logo.svg", alt: "Node.JS Logo" },
+    {
+      name: ".NET CORE",
+      logo: "/icons/dotnetcore-logo.svg",
+      alt: ".NET Core Logo",
+    },
+    { name: "PHP", logo: "/icons/php-logo.svg", alt: "PHP Logo" },
+    { name: "DOCKER", logo: "/icons/docker-logo.svg", alt: "Docker Logo" },
   ];
   return (
     <section

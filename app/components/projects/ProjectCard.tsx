@@ -1,10 +1,15 @@
 import Image from "next/image";
 
+type Technology = {
+  name: string;
+  logo: string;
+};
+
 type ProjectCardProps = {
   name: string;
   screenshot: string;
   description: string;
-  technologies: string[];
+  technologies: Technology[];
   siteUrl: string;
   review: string;
   reviewer: string;
@@ -19,11 +24,6 @@ export default function ProjectCard({
   review,
   reviewer,
 }: ProjectCardProps) {
-  const techIcons: Record<string, string> = {
-    "Next.js": "/nextjs-logo.svg",
-    "Tailwind CSS": "/tailwindcss-logo.svg",
-    Vercel: "/vercel-logo.svg",
-  };
   return (
     <div
       className="group relative w-80 h-134 cursor-pointer"
@@ -63,19 +63,17 @@ export default function ProjectCard({
             <div className="mt-auto flex flex-wrap gap-2">
               {technologies.map((tech) => (
                 <span
-                  key={tech}
+                  key={tech.name}
                   className="flex items-center gap-1.5 font-sora px-2.5 py-1 bg-orange-50 text-orange-600 text-xs font-medium rounded-full border border-orange-100"
                 >
-                  {techIcons[tech] && (
-                    <Image
-                      src={techIcons[tech]}
-                      alt={tech}
-                      width={12}
-                      height={12}
-                      className="w-3 h-3"
-                    />
-                  )}
-                  {tech}
+                  <Image
+                    src={tech.logo}
+                    alt={tech.name}
+                    width={12}
+                    height={12}
+                    className="w-3 h-3"
+                  />
+                  {tech.name}
                 </span>
               ))}
             </div>
@@ -110,7 +108,7 @@ export default function ProjectCard({
           <div className="mt-auto text-center">
             <div className="flex items-center justify-center gap-1.5 mb-2">
               <Image
-                src="/google-logo.svg"
+                src="/icons/google-logo.svg"
                 alt="Google"
                 width={16}
                 height={16}

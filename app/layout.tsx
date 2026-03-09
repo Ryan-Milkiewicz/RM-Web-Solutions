@@ -30,6 +30,7 @@ export const metadata = {
     "web hosting",
     "website hosting",
     "New York",
+    "Rensselaer County",
     "Wynantskill",
     "Albany",
     "Capital District",
@@ -75,6 +76,9 @@ export default function RootLayout({
     url: "https://rmwebsolutions.com",
     email: "info@rmwebsolutions.com",
     telephone: "+1-518-937-0948",
+    sameAs: [
+      "https://www.google.com/maps/place/RM+Web+Solutions/@42.6577141,-73.6438282,17z/data=!3m1!4b1!4m6!3m5!1s0x89de07689631dd85:0x74c6783a8360f926!8m2!3d42.6577141!4d-73.6438282!16s%2Fg%2F11y_c8s6nh",
+    ],
     areaServed: [
       "Wynantskill",
       "Averill Park",
