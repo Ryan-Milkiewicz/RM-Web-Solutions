@@ -23,6 +23,12 @@ export default function NavLinks() {
       </Link>
       <Link
         className="text-white hover:text-orange-500 transition"
+        href="/#projects"
+      >
+        Projects
+      </Link>
+      <Link
+        className="text-white hover:text-orange-500 transition"
         href="/contact-us"
       >
         Contact

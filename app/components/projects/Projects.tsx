@@ -5,7 +5,8 @@ export default function Projects() {
     {
       name: "Clemens Electric",
       screenshot: "/clemens-electric-screenshot.png",
-      description: "Powering Your Solar & Electric Solutions",
+      description:
+        "Business website for an electrical & solar contractor — built for local SEO and lead generation.",
       technologies: ["Next.js", "Tailwind CSS", "Vercel"],
       siteUrl: "https://clemenselectric.com",
       review:
@@ -16,7 +17,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 items-center"
+      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4"
     >
       <div className="space-y-4 mb-4">
         <h2 className="font-sora text-orange-500 text-2xl font-bold">
@@ -25,11 +26,11 @@ export default function Projects() {
         <h3 className="font-jakarta text-gray-800 text-xl font-semibold">
           A Few Projects We&apos;ve Worked On
         </h3>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-5">
-          {reviews.map((reivew) => (
-            <ProjectCard key={reivew.name} {...reivew} />
-          ))}
-        </div>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center">
+        {reviews.map((review) => (
+          <ProjectCard key={review.name} {...review} />
+        ))}
       </div>
     </section>
   );
