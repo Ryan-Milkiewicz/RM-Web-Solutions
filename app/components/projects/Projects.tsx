@@ -4,6 +4,7 @@ export default function Projects() {
   const reviews = [
     {
       name: "Clemens Electric",
+      screenshot: "/clemens-electric-screenshot.png",
       description: "Powering Your Solar & Electric Solutions",
       technologies: ["Next.js", "Tailwind CSS", "Vercel"],
       siteUrl: "https://clemenselectric.com",
@@ -22,7 +23,7 @@ export default function Projects() {
           Projects
         </h2>
         <h3 className="font-jakarta text-gray-800 text-xl font-semibold">
-          A Few Projects we&apos;ve worked on
+          A Few Projects We&apos;ve Worked On
         </h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-5">
           {reviews.map((reivew) => (
