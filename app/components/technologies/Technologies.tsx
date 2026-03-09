@@ -29,7 +29,7 @@ export default function Technologies() {
           Technologies
         </h2>
         <h3 className="font-jakarta text-gray-800 text-xl font-semibold">
-          Some of the cool tech we love to build with.
+          Some of the cool tech we love to build with
         </h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
           {techs.map((tech) => (

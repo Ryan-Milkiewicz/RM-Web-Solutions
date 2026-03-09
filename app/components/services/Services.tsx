@@ -38,7 +38,7 @@ export default function Services() {
           Our Services
         </h2>
         <h3 className="font-jakarta text-gray-800 text-xl font-semibold">
-          We provide a range of services to help your business grow and succeed.
+          We provide a range of services to help your business grow and succeed
         </h3>
       </div>
 

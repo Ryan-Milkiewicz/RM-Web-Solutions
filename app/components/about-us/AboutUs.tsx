@@ -9,7 +9,7 @@ export default function AboutUs() {
           About Us
         </h2>
         <h3 className="font-sora text-gray-800 text-xl font-semibold">
-          Custom Software Designed to Accelerate Your Growth
+          Custom software designed to accelerate your growth
         </h3>
         <p className="text-gray-500 font-bold">
           Backed by over 10 years of web and software development experience, RM
