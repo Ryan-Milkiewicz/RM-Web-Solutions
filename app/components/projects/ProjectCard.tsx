@@ -1,0 +1,119 @@
+"use client";
+import Image from "next/image";
+import { useState } from "react";
+
+type ProjectCardProps = {
+  name: string;
+  description: string;
+  technologies: string[];
+  siteUrl: string;
+  review: string;
+  reviewer: string;
+};
+
+export default function ProjectCard({
+  name = "Clemens Electric",
+  description = "A modern website for a local electrical contractor, featuring service listings, project gallery, and contact booking.",
+  technologies = ["Next.js", "Tailwind CSS", "Vercel"],
+  siteUrl = "https://clemenselectric.com",
+  review = "Working with this developer was an absolute pleasure. The site looks incredible and we've had so many compliments from customers. Our leads doubled in the first month!",
+  reviewer = "— Mike Clemens, Owner",
+}: Partial<ProjectCardProps>) {
+  const [flipped, setFlipped] = useState(false);
+  const screenshotUrl = `https://api.microlink.io/?url=${encodeURIComponent(siteUrl)}&screenshot=true&meta=false&embed=screenshot.url`;
+
+  return (
+    <div
+      className="relative w-80 h-120 cursor-pointer"
+      style={{ perspective: "1200px" }}
+      onMouseEnter={() => setFlipped(true)}
+      onMouseLeave={() => setFlipped(false)}
+    >
+      <div
+        className="relative w-full h-full transition-transform duration-700 ease-in-out"
+        style={{
+          transformStyle: "preserve-3d",
+          transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
+        }}
+      >
+        {/* FRONT */}
+        <div
+          className="absolute inset-0 rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-md flex flex-col"
+          style={{ backfaceVisibility: "hidden" }}
+        >
+          {/* Screenshot — big */}
+          <div className="relative w-full h-52 bg-gray-100 shrink-0 overflow-hidden">
+            <Image
+              src={screenshotUrl}
+              alt={`${name} screenshot`}
+              fill
+              className="object-cover object-top"
+              unoptimized
+            />
+            {/* subtle gradient fade at bottom */}
+            <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent" />
+          </div>
+
+          {/* Content */}
+          <div className="flex flex-col gap-3 p-5 flex-1">
+            <h3 className="font-semibold text-gray-900 text-lg leading-tight">
+              {name}
+            </h3>
+            <p className="text-gray-500 text-sm leading-relaxed">
+              {description}
+            </p>
+
+            {/* Technologies */}
+            <div className="mt-auto flex flex-wrap gap-2">
+              {technologies.map((tech) => (
+                <span
+                  key={tech}
+                  className="px-2.5 py-1 bg-orange-50 text-orange-600 text-xs font-medium rounded-full border border-orange-100"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <p className="text-xs text-gray-400 mt-1">Hover to see review →</p>
+          </div>
+        </div>
+
+        {/* BACK */}
+        <div
+          className="absolute inset-0 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 shadow-md flex flex-col items-center justify-center p-8 text-white"
+          style={{
+            backfaceVisibility: "hidden",
+            transform: "rotateY(180deg)",
+          }}
+        >
+          {/* Quote icon */}
+          <svg
+            className="w-10 h-10 text-orange-300 mb-4 opacity-80"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+          </svg>
+
+          <p className="text-center text-white/90 text-sm leading-relaxed italic mb-6">
+            &quot;{review}&quot;
+          </p>
+
+          <div className="mt-auto text-center">
+            <p className="text-orange-200 text-xs font-medium">{reviewer}</p>
+            <a
+              href={siteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="mt-3 inline-block px-4 py-2 bg-white text-orange-600 text-xs font-semibold rounded-full hover:bg-orange-50 transition-colors"
+            >
+              Visit Site ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
