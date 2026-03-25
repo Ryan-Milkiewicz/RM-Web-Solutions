@@ -6,6 +6,16 @@ export default function Technologies() {
     { name: "NEXT.JS", logo: "/icons/nextjs-logo.svg", alt: "Next.JS Logo" },
     { name: "ANGULAR", logo: "/icons/angular-logo.svg", alt: "Angular Logo" },
     {
+      name: "TYPESCRIPT",
+      logo: "/icons/typescript-logo.svg",
+      alt: "Typescript Logo",
+    },
+    {
+      name: "TAILWIND CSS",
+      logo: "/icons/tailwindcss-logo.svg",
+      alt: "Tailwind CSS Logo",
+    },
+    {
       name: "WORDPRESS",
       logo: "/icons/wordpress-logo.svg",
       alt: "Wordpress Logo",
@@ -16,8 +26,10 @@ export default function Technologies() {
       logo: "/icons/dotnetcore-logo.svg",
       alt: ".NET Core Logo",
     },
+    { name: "SANITY CMS", logo: "/icons/sanity-logo.svg", alt: "Sanity Logo" },
     { name: "PHP", logo: "/icons/php-logo.svg", alt: "PHP Logo" },
     { name: "DOCKER", logo: "/icons/docker-logo.svg", alt: "Docker Logo" },
+    { name: "VERCEL", logo: "/icons/vercel-alt-logo.svg", alt: "Vercel Logo" },
   ];
   return (
     <section
