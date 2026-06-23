@@ -18,6 +18,22 @@ export default function Projects() {
         "RM Web Solutions built our firm Clemens Electric website and the experience was excellent from start to finish. They took the time to understand our services (electrical, solar, EV chargers, generators, and energy storage), asked the right questions, and turned it into a clean, professional site that actually converts visitors into calls and form submissions. Communication was fast, timelines were clear, and revisions were handled quickly without any runaround. The final site looks great on mobile, loads fast, and the structure is set up in a way that makes sense for local search. Highly recommend RM Web Solutions.",
       reviewer: "— Stephen Clemens, Owner",
     },
+    {
+      name: "Clemens Consultants",
+      screenshot: "/clemens-consultants-screenshot.png",
+      description:
+        "Business website for a professional accounting and financial advisory firm providing tax preparation, tax planning, accounting services",
+      technologies: [
+        { name: "Next.js", logo: "/icons/nextjs-logo.svg" },
+        { name: "Tailwind CSS", logo: "/icons/tailwindcss-logo.svg" },
+        { name: "Vercel", logo: "/icons/vercel-logo.svg" },
+        { name: "Sanity CMS", logo: "/icons/sanity-logo.svg" },
+      ],
+      siteUrl: "https://clemensconsultants.com",
+      // review:
+      //   "RM Web Solutions built our firm Clemens Consultants website and the experience was excellent from start to finish. They took the time to understand our services (electrical, solar, EV chargers, generators, and energy storage), asked the right questions, and turned it into a clean, professional site that actually converts visitors into calls and form submissions. Communication was fast, timelines were clear, and revisions were handled quickly without any runaround. The final site looks great on mobile, loads fast, and the structure is set up in a way that makes sense for local search. Highly recommend RM Web Solutions.",
+      // reviewer: "— Stephen Clemens, Owner",
+    },
   ];
   return (
     <section

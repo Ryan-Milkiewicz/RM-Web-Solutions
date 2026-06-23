@@ -11,8 +11,8 @@ type ProjectCardProps = {
   description: string;
   technologies: Technology[];
   siteUrl: string;
-  review: string;
-  reviewer: string;
+  review?: string;
+  reviewer?: string;
 };
 
 export default function ProjectCard({
@@ -24,6 +24,8 @@ export default function ProjectCard({
   review,
   reviewer,
 }: ProjectCardProps) {
+  const hasReview = Boolean(review && reviewer);
+
   return (
     <div
       className="group relative w-80 h-134 cursor-pointer"
@@ -78,9 +80,11 @@ export default function ProjectCard({
               ))}
             </div>
 
-            <p className="font-jakarta text-xs text-gray-400 mt-1">
-              Hover to see review →
-            </p>
+            {hasReview && (
+              <p className="font-jakarta text-xs text-gray-400 mt-1">
+                Hover to see review →
+              </p>
+            )}
           </div>
         </div>
 
@@ -92,44 +96,46 @@ export default function ProjectCard({
             transform: "rotateY(180deg)",
           }}
         >
-          {/* Quote icon */}
-          <svg
-            className="w-10 h-10 text-orange-300 mb-4 opacity-80"
-            fill="currentColor"
-            viewBox="0 0 24 24"
+          {hasReview && (
+            <>
+              <svg
+                className="w-10 h-10 text-orange-300 mb-4 opacity-80"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+              </svg>
+
+              <p className="font-jakarta text-center text-white/90 text-sm leading-relaxed italic mb-6">
+                &quot;{review}&quot;
+              </p>
+
+              <div className="flex items-center justify-center gap-1.5 mb-2">
+                <Image
+                  src="/icons/google-logo.svg"
+                  alt="Google"
+                  width={16}
+                  height={16}
+                  className="w-4 h-4"
+                />
+                <span className="font-jakarta text-white/70 text-sm">
+                  Google Review
+                </span>
+              </div>
+              <p className="font-jakarta text-orange-200 text-sm font-medium mb-3">
+                {reviewer}
+              </p>
+            </>
+          )}
+
+          <a
+            href={siteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-jakarta inline-block px-4 py-2 bg-white text-orange-600 text-xs font-semibold rounded-full hover:bg-orange-50 transition-colors"
           >
-            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-          </svg>
-
-          <p className="font-jakarta text-center text-white/90 text-sm leading-relaxed italic mb-6">
-            &quot;{review}&quot;
-          </p>
-
-          <div className="mt-auto text-center">
-            <div className="flex items-center justify-center gap-1.5 mb-2">
-              <Image
-                src="/icons/google-logo.svg"
-                alt="Google"
-                width={16}
-                height={16}
-                className="w-4 h-4"
-              />
-              <span className="font-jakarta text-white/70 text-sm">
-                Google Review
-              </span>
-            </div>
-            <p className="font-jakarta text-orange-200 text-sm font-medium">
-              {reviewer}
-            </p>
-            <a
-              href={siteUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-jakarta mt-3 inline-block px-4 py-2 bg-white text-orange-600 text-xs font-semibold rounded-full hover:bg-orange-50 transition-colors"
-            >
-              Visit Site ↗
-            </a>
-          </div>
+            Visit Site ↗
+          </a>
         </div>
       </div>
     </div>
